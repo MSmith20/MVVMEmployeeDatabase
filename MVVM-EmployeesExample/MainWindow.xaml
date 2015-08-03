@@ -36,12 +36,12 @@
             <TextBox Text="{Binding SelectedEmployee.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5,0,-50,5" Grid.Row="3" Grid.Column="1"/>
             <TextBox Text="{Binding SelectedEmployee.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5,0,-50,5" Grid.Row="4" Grid.Column="1"/>
             <TextBox Text="{Binding SelectedEmployee.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5,0,-50,5" Grid.Row="5" Grid.Column="1"/>
-            <TextBox Text="Name" Margin="5,0,5,5" Grid.Row="0" Grid.Column="0"/>
-            <TextBox Text="Address" Margin="5,0,5,5" Grid.Row="1" Grid.Column="0"/>
-            <TextBox Text="Number" Margin="5,0,5,5" Grid.Row="2" Grid.Column="0"/>
-            <TextBox Text="Job Title / Role" Margin="5,0,5,5" Grid.Row="3" Grid.Column="0"/>
-            <TextBox Text="Time at Comapany" Margin="5,0,5,5" Grid.Row="4" Grid.Column="0"/>
-            <TextBox Text="Emergency Contact Number" Margin="5,0,5,5" Grid.Row="5" Grid.Column="0"></TextBox>
+            <Label Margin="5,0,5,5" Grid.Row="0" Grid.Column="0">Name</Label>
+            <Label Margin="5,0,5,5" Grid.Row="1" Grid.Column="0">Address</Label>
+            <Label Margin="5,0,5,5" Grid.Row="2" Grid.Column="0">Number</Label>
+            <Label Margin="5,0,5,5" Grid.Row="3" Grid.Column="0">Job Title</Label>
+            <Label Margin="5,0,5,5" Grid.Row="4" Grid.Column="0">Time at Company</Label>
+            <Label Margin="5,0,5,5" Grid.Row="5" Grid.Column="0">Emergency Contact Number</Label>
         </Grid>
     </DockPanel>
 </Window>

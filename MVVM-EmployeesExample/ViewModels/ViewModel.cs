@@ -10,9 +10,8 @@ using System.Collections;
 
 namespace MVVM_EmployeesExample.ViewModels
 {
-    class ViewModel : BindableBase, INotifyDataErrorInfo
+    class ViewModel : BindableBase
     {
-        ErrorsContainer<string> validationErrors;
 
         private string name = default(string);
 
@@ -20,14 +19,6 @@ namespace MVVM_EmployeesExample.ViewModels
 
          public ViewModel ()
 	    {
-            this.validationErrors = new ErrorsContainer<string>(property =>
-            {
-                var handler = this.ErrorsChanged;
-                if (handler != null)
-                {
-                    handler(this, new DataErrorsChangedEventArgs(property));
-                }
-            });
 	    }
 
 
@@ -42,14 +33,6 @@ namespace MVVM_EmployeesExample.ViewModels
              {
                  this.SetProperty(ref this.name, value);
 
-                 List<string> errors = new List<string>();
-
-                 if (string.IsNullOrEmpty(this.name))
-                 {
-                     errors.Add("Employee name cannot be empty.");
-                 }
-
-                 this.validationErrors.SetErrors(() => this.Name, errors);
              }
          }
 
@@ -69,19 +52,5 @@ namespace MVVM_EmployeesExample.ViewModels
                  this.OnPropertyChanged(() => this.Number);
              }
          }
-
-         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
-
-         public IEnumerable GetErrors(string propertyName)
-         {
-             return this.validationErrors.GetErrors(propertyName);
-         }
-
-         public bool HasErrors
-         {
-             get { return this.validationErrors.HasErrors; }
-         }
-
-
     }
 }
