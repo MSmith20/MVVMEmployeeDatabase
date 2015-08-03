@@ -36,6 +36,61 @@ namespace MVVM_EmployeesExample.ViewModels
              }
          }
 
+         public string Address
+         {
+             get
+             {
+                 return this.name;
+             }
+
+             set
+             {
+                 this.SetProperty(ref this.name, value);
+
+             }
+         }
+
+         public string JobTitle
+         {
+             get
+             {
+                 return this.name;
+             }
+
+             set
+             {
+                 this.SetProperty(ref this.name, value);
+
+             }
+         }
+
+         public string TimeATCompany
+         {
+             get
+             {
+                 return this.name;
+             }
+
+             set
+             {
+                 this.SetProperty(ref this.name, value);
+
+             }
+         }
+
+         public string EmergencyContactNumber
+         {
+             get
+             {
+                 return this.name;
+             }
+
+             set
+             {
+                 this.SetProperty(ref this.name, value);
+
+             }
+         }
          /// <summary>
          /// Get or sets a value that indicates the employee number.
          /// </summary>

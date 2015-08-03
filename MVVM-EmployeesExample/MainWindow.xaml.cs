@@ -23,9 +23,9 @@ namespace MVVM_EmployeesExample
         public MainWindow()
         {
             InitializeComponent();
-            GridEmployeeRecord.IsEnabled = false;
-            StatusBarChanges.IsEnabled = false;
-            Remove.IsEnabled = false;
+            //GridEmployeeRecord.IsEnabled = false;
+            //StatusBarChanges.IsEnabled = false;
+            //Remove.IsEnabled = false;
             this.DataContext = new ViewModels.ShellModel();
         }
     }
